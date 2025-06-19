@@ -8,6 +8,15 @@ interface FullPageWrapperProps {
 }
 
 export default function FullPageWrapper({ children }: FullPageWrapperProps) {
+  useEffect(() => {
+    console.log('FullPageWrapper mounted');
+    // Load image directly to check if it's accessible
+    const img = new Image();
+    img.onload = () => console.log('Background image loaded successfully');
+    img.onerror = () => console.log('Error loading background image');
+    img.src = '/bring-background.png';
+  }, []);
+
   const options = {
     licenseKey: 'TX6L9-29OSK-PT1KK-2JSLI-JZLYM',
     credits: { enabled: false },
@@ -32,7 +41,19 @@ export default function FullPageWrapper({ children }: FullPageWrapperProps) {
       {...options}
       render={({ state, fullpageApi }) => {
         return (
-          <div id="fullpage">
+          <div 
+            id="fullpage" 
+            className="page-wrapper"
+            style={{
+              position: 'relative',
+              zIndex: 1,
+              backgroundColor: 'pink',
+              backgroundImage: `url('/bring-background.png')`,
+              backgroundPosition: 'center 10%',
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: '400px auto',
+            }}
+          >
             {children}
           </div>
         )

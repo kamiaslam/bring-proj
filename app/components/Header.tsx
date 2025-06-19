@@ -12,7 +12,7 @@ export default function Header() {
     { href: '/', label: 'Who We Are' },
     { href: '/what-we-do', label: 'What We Do' },
     { href: '/in-culture', label: 'In culture' },
-    { href: '/reports', label: 'Reports' },
+    { href: '/reports', label: 'Get in touch' },
   ]
 
   return (
@@ -72,7 +72,7 @@ export default function Header() {
                     aria-current={pathname === '/reports' ? 'page' : undefined}
                     className={`navbar_item w-inline-block ${pathname === '/reports' ? 'w--current' : ''}`}
                   >
-                    <div data-hover="Reports" className="navbar_item-label">Reports</div>
+                    <div data-hover="Get in touch" className="navbar_item-label">Get in touch</div>
                   </Link>
                 </div>
               </nav>
