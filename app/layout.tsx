@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import CanvasBackground from './components/CanvasBackground'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,8 +25,8 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link href="https://cdn.prod.website-files.com/66d74807dfbcdfb33c6f9069/css/weareportas-2024.webflow.3c650eb36.min.css" rel="stylesheet" type="text/css"/>
-        <link href="https://cdn.prod.website-files.com/6560d97507999a100386f1a6/6560d97507999a100386f1b3_Portas_Flavicon.png" rel="shortcut icon" type="image/x-icon"/>
-        <link href="https://cdn.prod.website-files.com/6560d97507999a100386f1a6/6560d97507999a100386f1ad_PortasLogo_Flavicon_256.png" rel="apple-touch-icon"/>
+        <link href="/Bring-logo.svg" rel="shortcut icon" type="image/x-icon"/>
+        <link href="/Bring-logo.svg" rel="apple-touch-icon"/>
         
         {/* Google Tag Manager */}
         <script
@@ -57,7 +56,6 @@ export default function RootLayout({
         </noscript>
         
         <div className="page-wrapper">
-          <CanvasBackground />
           {children}
         </div>
       </body>

@@ -237,7 +237,33 @@ margin: 0rem !important;
 }
 
 .page-wrapper {
-	overflow-x: clip;
+  overflow-x: clip;
+  min-height: 100vh;
+  background: url('/bring-background.png') 85% 5% no-repeat;
+  background-size: 25% auto;
+  position: relative;
+}
+
+/* Responsive background adjustments */
+@media screen and (max-width: 991px) {
+  .page-wrapper {
+    background-size: 33% auto;
+    background-position: 80% 8%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .page-wrapper {
+    background-size: 38% auto;
+    background-position: 75% 12%;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .page-wrapper {
+    background-size: 43% auto;
+    background-position: 70% 15%;
+  }
 }
 
 input {
