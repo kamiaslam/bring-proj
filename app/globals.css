@@ -37,6 +37,7 @@
   word-wrap: break-word;
   margin-left: 0 !important;
   margin-right: auto !important;
+  text-align: left !important;
 }
 
 .full-height-container {
@@ -236,34 +237,43 @@ margin: 0rem !important;
   padding-left: 0rem !important;
 }
 
-.page-wrapper {
+#fullpage.page-wrapper {
   overflow-x: clip;
   min-height: 100vh;
-  background: url('/bring-background.png') 85% 5% no-repeat;
-  background-size: 25% auto;
+  background-color: pink !important;
+  background-image: url('/bring-background.png') !important;
+  background-position: center 10% !important;
+  background-repeat: no-repeat !important;
+  background-size: 400px auto !important;
   position: relative;
+  z-index: 1;
 }
 
 /* Responsive background adjustments */
 @media screen and (max-width: 991px) {
-  .page-wrapper {
-    background-size: 33% auto;
-    background-position: 80% 8%;
+  #fullpage.page-wrapper {
+    background-size: 350px auto !important;
+    background-position: center 8% !important;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .page-wrapper {
-    background-size: 38% auto;
-    background-position: 75% 12%;
+  #fullpage.page-wrapper {
+    background-size: 300px auto !important;
+    background-position: center 6% !important;
   }
 }
 
 @media screen and (max-width: 479px) {
-  .page-wrapper {
-    background-size: 43% auto;
-    background-position: 70% 15%;
+  #fullpage.page-wrapper {
+    background-size: 250px auto !important;
+    background-position: center 5% !important;
   }
+}
+
+/* Adjust text alignment for all sections */
+.section_page-content .container-large {
+  padding-left: 8% !important;
 }
 
 input {

@@ -55,9 +55,7 @@ export default function RootLayout({
           />
         </noscript>
         
-        <div className="page-wrapper">
-          {children}
-        </div>
+        {children}
       </body>
     </html>
   )
